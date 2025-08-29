@@ -1,0 +1,184 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+/* === NAVBAR CORREGIDA === */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  min-height: 80px;                 /* permite crecer si hace falta */
+  background-color: #00205b;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+  /* layout */
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* contenedor interno (opcional pero ayuda) */
+.navbar .inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Logo a la izquierda, sin empujes raros */
+.navbar .logo {
+  flex: 0 0 auto;
+}
+.navbar .logo img {
+  height: 70px;          /*ancho del logo*/
+  width: auto;
+  display: block;
+}
+
+/* Links a la derecha, sin recortes */
+.navbar .nav-links {
+  flex: 1 1 auto;        /* ocupa el resto del ancho */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 32px;
+  min-width: 0;          /* evita overflow de flex-item */
+  flex-wrap: nowrap;     /* no permitir salto de línea */
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;   /* ¡clave! no se parten */
+  line-height: 1;        /* evita que “crezca” en altura */
+  padding: 8px 0;
+  transition: color .3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #a9d4f5;
+}
+
+/* Deja espacio al contenido por la barra fija */
+.carousel { margin-top: 80px; }
+
+
+
+/* Header dentro del carrusel */
+header {
+  position: absolute;
+  top: 50%; /* Centro vertical */
+  left: 50%; /* Centro horizontal */
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+
+/* Contenedor principal */
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+section {
+  margin: 40px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #c0392b;
+}
+
+/* Productos */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.producto {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.producto img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Carrusel */
+.carousel-title {
+  font-family: 'Lobster', cursive;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ajusta sin deformar */
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+
+
