@@ -1,0 +1,154 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../img/fondo login 2.png");
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #00205b;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+}
+
+/* Contenedor principal para centrar el login */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* altura total menos navbar */
+    padding-top: 80px; /* deja espacio por la navbar fija */
+}
+
+/* Login Box */
+.login-container {
+    background: rgb(0, 32, 91);
+    padding: 30px;
+    width: 300px;
+    border-radius: 8px;
+    margin: 80px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    color: white;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+.forgot {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #bdc3c7;
+    text-decoration: none;
+}
+
+.forgot:hover {
+    color: white;
+}
+
+/* Navbar links */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #00205b;
+}
+
+.navbar {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    min-height: 80px;
+    background-color: #00205b;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.navbar .logo img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+.navbar .nav-links {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 32px;
+    min-width: 0;
+    flex-wrap: nowrap;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+    line-height: 1;
+    padding: 8px 0;
+    transition: color .3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #a9d4f5;
+}
+
