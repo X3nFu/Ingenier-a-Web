@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control</title>
+    <link rel="icon" type="image/x-icon" href="../img/icon.ico">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="../css/estilos_panelcontrol.css">
+    <link rel="icon" type="image/x-icon" href="../img/icon.ico">
+</head>
+<body>
+<!-- Sidebar -->
+<div class="sidebar">
+    <img src="../img/logo.png" alt="Logo Empresa">
+    <a href="../HTML/panel de control.html" class="active"><i class="bi bi-box"></i>Panel de control</a>
+    <a href="#"><i class="bi bi-box"></i> Inventario</a>
+    <a href="#"><i class="bi bi-cart"></i> Compras</a>
+    <a href="#"><i class="bi bi-bag"></i> Ventas</a>
+    <a href="#"><i class="bi bi-cash-coin"></i> Balance</a>
+    <a href="clientes.php"><i class="bi bi-people"></i> Clientes</a>
+</div>
+
+<!-- Barra superior -->
+<div class="topbar">
+    <h2><strong>Panel de Control</strong></h2>
+    <a href="login.html" class="btn btn-outline-danger">Cerrar Sesión</a>
+</div>
+
+<!-- Contenido -->
+<div class="content">
+    <p>Selecciona un módulo:</p>
+
+    <div class="container mt-4">
+        <div class="row g-4">
+            <!-- Inventario -->
+            <div class="col-md-4">
+                <div class="card text-center p-4 dashboard-card">
+                    <i class="bi bi-box text-primary"></i>
+                    <h5>Inventario</h5>
+                    <p>Control de stock y niveles mínimos.</p>
+                    <a href="inventario.php" class="btn btn-primary btn-sm">Ir a Inventario</a>
+                </div>
+            </div>
+            <!-- Compras -->
+            <div class="col-md-4">
+                <div class="card text-center p-4 dashboard-card">
+                    <i class="bi bi-cart text-success"></i>
+                    <h5>Compras</h5>
+                    <p>Registro y control de compras.</p>
+                    <a href="compras.php" class="btn btn-success btn-sm">Ir a Compras</a>
+                </div>
+            </div>
+            <!-- Ventas -->
+            <div class="col-md-4">
+                <div class="card text-center p-4 dashboard-card">
+                    <i class="bi bi-bag text-warning"></i>
+                    <h5>Ventas</h5>
+                    <p>Gestión de ventas del mes.</p>
+                    <a href="ventas.php" class="btn btn-warning btn-sm">Ir a Ventas</a>
+                </div>
+            </div>
+            <!-- Balance -->
+            <div class="col-md-4">
+                <div class="card text-center p-4 dashboard-card">
+                    <i class="bi bi-cash-coin text-danger"></i>
+                    <h5>Balance</h5>
+                    <p>Ingresos y egresos de la empresa.</p>
+                    <a href="balance.php" class="btn btn-danger btn-sm">Ir a Balance</a>
+                </div>
+            </div>
+            <!-- Clientes -->
+            <div class="col-md-4">
+                <div class="card text-center p-4 dashboard-card">
+                    <i class="bi bi-people text-info"></i>
+                    <h5>Clientes</h5>
+                    <p>Administración de clientes.</p>
+                    <a href="clientes.php" class="btn btn-info btn-sm">Ir a Clientes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

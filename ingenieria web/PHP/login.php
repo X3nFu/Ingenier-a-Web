@@ -19,13 +19,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verificar contraseña
         if (password_verify($password, $usuario['password'])) {
             $_SESSION['usuario'] = $usuario['nombre'];
-            header("Location: ../HTML/inventario.html"); // página después de login
+            header("Location: ../HTML/panel de control.html"); // solo aquí sí redirige
             exit();
         } else {
-            echo "❌ Contraseña incorrecta.";
+            // Contraseña incorrecta
+            echo "
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+            </head>
+            <body>
+                <script>
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Contraseña incorrecta',
+                        text: 'La contraseña ingresada no es válida.'
+                    }).then(() => {
+                        window.location.href = '../HTML/login.html'; 
+                    });
+                </script>
+            </body>
+            </html>";
         }
     } else {
-        echo "❌ Usuario no encontrado.";
+        // Usuario no encontrado
+        echo "
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+        </head>
+        <body>
+            <script>
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Usuario no encontrado',
+                    text: 'No existe ninguna cuenta con ese correo.'
+                }).then(() => {
+                    window.location.href = '../HTML/login.html'; 
+                });
+            </script>
+        </body>
+        </html>";
     }
 }
 ?>

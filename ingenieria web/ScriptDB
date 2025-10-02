@@ -1,0 +1,32 @@
+--TABLA DE USUARIOS--
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+--TABLA CLIENTES--
+
+USE tallerautomotriz;
+
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    celular VARCHAR(20),
+    correo VARCHAR(100) UNIQUE NOT NULL
+);
+
+--TABLA DE INVENTARIO--
+
+CREATE TABLE inventario (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(150) NOT NULL,
+  descripcion TEXT,
+  precio DECIMAL(12,2) NOT NULL DEFAULT 0,
+  stock INT NOT NULL DEFAULT 0,
+  imagen VARCHAR(255) DEFAULT NULL
+);
+

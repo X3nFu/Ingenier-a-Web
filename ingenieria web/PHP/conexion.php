@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";   // usuario por defecto en XAMPP
 $pass = "";       // contraseña vacía por defecto
-$db   = "login_data";
+$db   = "tallerautomotriz";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
